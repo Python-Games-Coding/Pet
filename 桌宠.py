@@ -61,6 +61,7 @@ class PetApp:
     
         about = Button(root, text='关于', width=80, height=3, command=About, bg='SkyBlue1', fg='black')
         about.pack()
+        
 
     def center_pet(self):
         pet_coords = self.c.bbox(self.body)
@@ -247,6 +248,8 @@ class PetApp:
         self.clean_button.config(state=DISABLED)
 
 root = Tk()
+exit = Button(root, text='退出', width=80, height=3, command=root.destroy, bg='SkyBlue1', fg='black')
+exit.pack()
 app = PetApp(root)
 root.mainloop()
     
